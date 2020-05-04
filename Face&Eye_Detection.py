@@ -11,9 +11,8 @@ import cv2
 
 
 #Face detection
-
 face_cascade = cv2.CascadeClassifier('C:\\Users\Ajay\Anaconda3\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml')
-img=cv2.imread("1.jpg")
+img=cv2.imread("1.jpg")  #name of the image-->1.jpg
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(gray,1.3,5)
 print(type(faces))
@@ -60,10 +59,3 @@ resized=cv2.resize(img,(600,600))
 cv2.imshow("final",resized)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
